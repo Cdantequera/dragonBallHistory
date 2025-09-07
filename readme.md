@@ -2,7 +2,6 @@
 
 Un emocionante juego de navegador inspirado en el clásico "Whac-A-Mole" pero con la temática de Dragon Ball Z. ¡Pon a prueba tus reflejos y revive las batallas más icónicas de la serie!
 
-[Imagen del gameplay de Dragon Ball Z Whack a Foe]
 
 ## 🎮 Cómo Jugar
 
