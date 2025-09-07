@@ -37,7 +37,7 @@ const NIVELES = [
         velocidad: 900,
         prota: "images/protagonists/gokuPequeño.png",
         oponentes: ["images/opponents/taopp.png"],
-        puntosParaGanar: 10,
+        puntosParaGanar: 1,
         videoVictoria: "videos/gokutao.mp4"
     },
     {
@@ -47,7 +47,7 @@ const NIVELES = [
         velocidad: 800,
         prota: "images/protagonists/gokuPequeño.png",
         oponentes: ["images/opponents/reyDemonio.png"],
-        puntosParaGanar: 10,
+        puntosParaGanar: 1,
         videoVictoria: "videos/reyDemonio.mp4"
     },
     {
@@ -57,7 +57,7 @@ const NIVELES = [
         velocidad: 750,
         prota: "images/protagonists/gokuAdole.png",
         oponentes: ["images/opponents/piccoloJr.png"],
-        puntosParaGanar: 10,
+        puntosParaGanar: 1,
         videoVictoria: "videos/piccoloJr.mp4"
     },
     {
@@ -67,7 +67,7 @@ const NIVELES = [
         velocidad: 700,
         prota: "images/protagonists/gokuAdu.png",
         oponentes: ["images/opponents/vegeta1.png"],
-        puntosParaGanar: 5,
+        puntosParaGanar: 1,
         videoVictoria: "videos/gokuvegeta.mp4"
     },
     {
@@ -78,7 +78,7 @@ const NIVELES = [
         prota: "images/protagonists/gokussj1.png",
         oponentes: ["images/opponents/freezer.png"],
         video: "videos/nivel5_intro.mp4",
-        puntosParaGanar: 2,
+        puntosParaGanar: 1,
         videoVictoria: "videos/gokuvsfree.mp4"
     },
     {
@@ -97,66 +97,66 @@ const NIVELES = [
         nombre: "Androides 17 y 18 vs Vegeta SSJ1",
         duracion: 30,
         velocidad: 550,
-        prota: "images/protagonists/vegeta_ssj1.png",
-        oponentes: ["images/opponents/androide_17.png", "images/opponents/androide_18.png"],
+        prota: "images/protagonists/vegetassj1.png",
+        oponentes: ["images/opponents/no18.png", "images/opponents/androide_18.png"],
         video: "videos/nivel7_intro.mp4",
-        puntosParaGanar: 50,
-        videoVictoria: "videos/vegeta-androides.mp4"
+        puntosParaGanar: 1,
+        videoVictoria: "videos/vegetavs18.mp4"
     },
     {
         nivel: 8,
         nombre: "Cell vs Goku SSJ1",
         duracion: 30,
         velocidad: 500,
-        prota: "images/protagonists/goku_ssj1_cell.png",
+        prota: "images/protagonists/gokussj2.png",
         oponentes: ["images/opponents/cell.png"],
         video: "videos/nivel8_intro.mp4",
-        puntosParaGanar: 55,
-        videoVictoria: "videos/goku-cell.mp4"
+        puntosParaGanar: 1,
+        videoVictoria: "videos/gokucell.mp4"
     },
     {
         nivel: 9,
         nombre: "Cell vs Gohan SSJ2",
         duracion: 25,
         velocidad: 450,
-        prota: "images/protagonists/gohan_ssj2.png",
+        prota: "images/protagonists/gohanssj2.png",
         oponentes: ["images/opponents/cell.png"],
         video: "videos/nivel9_intro.mp4",
-        puntosParaGanar: 60,
-        videoVictoria: "videos/gohan-cell.mp4"
+        puntosParaGanar: 1,
+        videoVictoria: "videos/gohanvscell.mp4"
     },
     {
         nivel: 10,
         nombre: "Vegeta M vs Goku SSJ2",
         duracion: 25,
         velocidad: 400,
-        prota: "images/protagonists/goku_ssj2.png",
-        oponentes: ["images/opponents/majin_vegeta.png"],
+        prota: "images/protagonists/gokussj2.png",
+        oponentes: ["images/protagonists/vegetaM.png"],
         video: "videos/nivel10_intro.mp4",
-        puntosParaGanar: 65,
-        videoVictoria: "videos/goku-vegetam.mp4"
+        puntosParaGanar: 1,
+        videoVictoria: "videos/gokuvsvegeta.mp4"
     },
     {
         nivel: 11,
         nombre: "Majin Buu vs Goku SSJ3",
         duracion: 20,
         velocidad: 350,
-        prota: "images/protagonists/goku_ssj3.png",
-        oponentes: ["images/opponents/majin_buu.png"],
+        prota: "images/protagonists/ssj3.png",
+        oponentes: ["images/opponents/majinbuu.png"],
         video: "videos/nivel11_intro.mp4",
-        puntosParaGanar: 70,
-        videoVictoria: "videos/goku-buu.mp4"
+        puntosParaGanar: 1,
+        videoVictoria: "videos/gokuSss3.mp4"
     },
     {
         nivel: 12,
         nombre: "Kid Buu vs Genkidama",
         duracion: 20,
         velocidad: 300,
-        prota: "images/protagonists/goku_genkidama.png",
-        oponentes: ["images/opponents/kid_buu.png"],
+        prota: "images/protagonists/gokuEnd.png",
+        oponentes: ["images/opponents/kidBuu.png"],
         video: "videos/nivel12_intro.mp4",
-        puntosParaGanar: 75,
-        videoVictoria: "videos/goku-kidbuu.mp4"
+        puntosParaGanar: 1,
+        videoVictoria: "videos/gokuKidBuu.mp4"
     }
 ];
 
@@ -182,7 +182,7 @@ function reproducirVideoIntro(levelConfig) {
     btnReiniciar.style.display = "none";
     
     videoContainer.style.display = "flex";
-    videoMessage.textContent = "Introducción del nivel - Presiona PLAY";
+    videoMessage.textContent = "*";
     
     levelVideo.src = levelConfig.video;
     
@@ -202,8 +202,8 @@ function reproducirVideoIntro(levelConfig) {
 
 function reproducirVideoVictoria(levelConfig) {
     videoContainer.style.display = "flex";
-    videoMessage.textContent = "¡Victoria! - Presiona PLAY";
-    
+    videoMessage.textContent = "*";
+
     levelVideo.src = levelConfig.videoVictoria;
     
     levelVideo.onended = () => {
