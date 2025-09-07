@@ -1,5 +1,5 @@
 /*
- * JUEGO: DRAGON BALL Z - WHACK A FOE
+ * JUEGO: DRAGON BALL 
  */
 
 // 1. Elementos del DOM
