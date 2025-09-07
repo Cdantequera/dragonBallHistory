@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+h2.count {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Paytone One", sans-serif;
+  background-color: #769c38;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+#protagonist {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+#protagonist-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 3px solid #ffcc00;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+
+.btn-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#level-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.level-btn {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Paytone One", sans-serif;
+  background-color: #066924;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+.level-btn:hover {
+  background-color: #74d691;
+  color: #0d5322;
+}
+
+#restart-game {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Paytone One", sans-serif;
+  background-color: #b32e2e;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.5s ease;
+}
+
+#restart-game:hover {
+  background-color: #ff6b6b;
+  color: #7a1c1c;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.item {
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.oponente {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: #d5d6db;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oponente img {
+  padding: 7px;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.oponente-hide {
+  bottom: 20px;
+  width: 40px;
+}
+
+.oponente-appear {
+  width: 200px;
+  bottom: 40px;
+}
+
+.bush {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.whack-text {
+  color: #ffcc00;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 2px 2px 4px #000;
+  font-weight: bold;
+  animation: fadeUp 0.5s ease-out;
+}
+
+@keyframes fadeUp {
+  0% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -30px); }
+}
+
+#video-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#level-video {
+  width: 80%;
+  max-width: 800px;
+  border: 3px solid #ffcc00;
+  border-radius: 10px;
+}
+
+.video-message {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Media queries para dispositivos más pequeños */
+/* @media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2.count {
+    font-size: 1.2rem;
+  }
+
+  #protagonist-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .level-btn, #restart-game {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .item {
+    aspect-ratio: 4 / 5;
+  }
+
+  .oponente-hide {
+    width: 40px;
+  }
+
+  .oponente-appear {
+    width: 100px;
+  }
+
+  .bush {
+    width: 100px;
+  }
+
+  .whack-text {
+    font-size: 18px;
+  }
+
+  #level-video {
+    width: 95%;
+  }
+
+  .video-message {
+    font-size: 1.2rem;
+  }
+} */
+
+/* @media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2.count {
+    font-size: 1rem;
+  }
+
+  #protagonist-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .level-btn, #restart-game {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .item {
+    aspect-ratio: 3 / 4;
+  }
+
+  .oponente-hide {
+    width: 30px;
+  }
+
+  .oponente-appear {
+    width: 80px;
+    bottom: 30px;
+  }
+
+  .bush {
+    width: 80px;
+  }
+
+  .whack-text {
+    font-size: 16px;
+  }
+
+  .video-message {
+    font-size: 1rem;
+  }
+} */
