@@ -204,7 +204,7 @@ body {
 }
 
 /* Media queries para dispositivos más pequeños */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 1.8rem;
   }
@@ -256,9 +256,9 @@ body {
   .video-message {
     font-size: 1.2rem;
   }
-} */
+} 
 
-/* @media (max-width: 480px) {
+@media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
   }
@@ -307,4 +307,4 @@ body {
   .video-message {
     font-size: 1rem;
   }
-} */
+} 
