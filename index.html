@@ -9,7 +9,10 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <header>
     <h1>🐉 Goku 🐉</h1>
+    </header>
+<aside id="side-derecha">
     <h2 class="count">
         Tiempo: <span id="time-count">0</span> &nbsp;
         Puntos: <span id="score-count">0</span>
@@ -18,12 +21,14 @@
     <div id="protagonist">
         <img id="protagonist-image" src="images/placeholder.png" alt="Protagonista">
     </div>
-
+</aside>
+<aside id="side-izquierda">
     <div class="btn-container">
         <div id="level-selection"></div>
         <button id="restart-game" style="display: none;">Reiniciar Juego</button>
     </div>
-
+</aside>
+<main>
     <div class="container">        
         <div class="item">
             <div class="bush">
@@ -106,6 +111,7 @@
             </div>
         </div>
     </div>
+</main>
 
     <div id="video-container">
         <video id="level-video">
@@ -113,6 +119,8 @@
         </video>
         <p class="video-message">Presiona PLAY para ver el video</p>
     </div>
+    <footer><p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+            <p>Diseñado Por DAnte.dev</p></footer>
 
     <script src="script.js"></script>
 </body>
